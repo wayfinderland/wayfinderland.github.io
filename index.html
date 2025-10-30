@@ -20,6 +20,20 @@
       flex-direction: column;
       justify-content: space-between;
       text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+
+    /* Soft white haze overlay for better contrast */
+    body::before {
+      content: "";
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(255, 255, 255, 0.5); /* adjust opacity 0.4–0.6 if needed */
+      z-index: 0;
     }
 
     main {
@@ -29,7 +43,9 @@
       justify-content: center;
       align-items: center;
       padding: 2rem;
-      text-shadow: 0 1px 3px rgba(255, 255, 255, 0.5);
+      text-shadow: 0 1px 3px rgba(255, 255, 255, 0.6);
+      position: relative;
+      z-index: 1;
     }
 
     h1 {
@@ -49,6 +65,17 @@
       color: white;
       padding: 1rem;
       background: rgba(0, 0, 0, 0.4);
+      position: relative;
+      z-index: 1;
+    }
+
+    a {
+      color: #1a1a1a;
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
     }
   </style>
 </head>
@@ -57,6 +84,7 @@
     <h1>Wayfinder Land Company LTD</h1>
     <p>Granville, Ohio</p>
     <p>Hospitality and Property Management</p>
+    <p><a href="mailto:info@wayfinderlandcompany.com">info@wayfinderlandcompany.com</a></p>
   </main>
 
   <footer>
